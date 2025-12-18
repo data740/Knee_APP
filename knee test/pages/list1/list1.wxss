@@ -1,0 +1,215 @@
+/* pages/list1/list1.wxss */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 0;
+}
+
+
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.bg image{
+  width: 100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* 内容在背景图之上 */
+  width: 100%;
+  max-width: 690rpx;
+  color: black;
+}
+
+.subtitle {
+  color: black;
+  text-align: center;
+}
+
+.panel-title{
+  margin-bottom: 40rpx;
+  
+}
+
+.ui-uploader-cell-other {
+  width: 690rpx;
+  padding: 40rpx 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* justify-content: flex-start; *//* align-items: center; */
+}
+ 
+.ui-uploader-cell {
+  width: 690rpx;
+  /* padding: 20rpx 0; */
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+ 
+.ui-uploader-item {
+  width: 118rpx;
+  height: 118rpx;
+  margin-right: 65rpx;
+  margin-bottom: 60rpx;
+  padding-bottom: 2rpx;
+  padding-right: 2rpx;
+  position: relative;
+}
+ 
+.title2 {
+  width: 520rpx;
+  display: flex;
+  align-items: center;
+}
+ 
+.ui-uploader-item-icon {
+  position: absolute;
+  right: 0;
+}
+ 
+.ui-uploader {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0rpx 40rpx 0 rgba(0, 0, 0, 0.08);
+}
+
+.ui-uploader-item-image {
+  width: 180rpx; /* 图片宽度占满父容器 */
+  height: 180rpx; /* 图片高度占满父容器 */
+  object-fit: cover; /* 保持图片比例，裁剪超出部分 */
+}
+
+.font30 {
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 两端对齐 */
+  font-size: 36rpx; /* 字体大小 */
+  margin-left: 20rpx; /* 左边距 */
+  margin-top: 20rpx; /* 上边距 */
+  padding-bottom: 20rpx; /* 下边距 */
+  border-bottom: 3rpx solid grey; /* 下划线 */
+}
+
+/* 调整日历图标样式 */
+.calendar-icon {
+  width: 60rpx; /* 图标宽度 */
+  height: 60rpx; /* 图标高度 */
+  margin-left: 10rpx; /* 图标左边距 */
+}
+
+.color3{
+  color: black;
+}
+
+.color6{
+  color: #666;
+}
+
+.timeIcon{
+  color:#666;
+  font-size:18rpx;
+  margin-left: 5rpx;
+}
+
+.button-container {
+  position: relative;
+  margin-top: 95px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column; /* 垂直排列按钮 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightskyblue; /* 设置按钮背景颜色 */
+  color: black; /* 设置按钮文字颜色 */
+  width: 100%; /* 设置按钮宽度为100%，铺满整行 */
+  height: 70rpx; /* 设置按钮高度 */
+  border-radius: 40rpx; /* 设置按钮圆角 */
+  margin: 5rpx 0; /* 设置按钮之间的间距 */
+  padding: 0rpx; /* 设置按钮内边距 */
+}
+
+.start-button {
+  position: relative; /* 相对于.button-container定位 */
+  bottom: 5rpx; /* 距离底部5rpx */
+}
+
+.home-button {
+  position: relative; /* 相对于.button-container定位 */
+  top: 5rpx; /* 距离顶部5rpx */
+}
+
+.txt {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+/* 示例图片区域 */
+.example-section {
+  margin: 40rpx 0;
+  width: 100%;
+}
+
+.example-title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+  padding-left: 20rpx;
+}
+
+.example-scroll {
+  width: 100%;
+  height: 280rpx;
+  white-space: nowrap;
+}
+
+.example-item {
+  display: inline-block;
+  width: 220rpx;
+  height: 250rpx;
+  margin-right: 20rpx;
+  vertical-align: top;
+}
+
+.example-image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+  margin-left: 10rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.example-text {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 10rpx;
+}

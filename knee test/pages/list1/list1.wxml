@@ -1,0 +1,79 @@
+<!--pages/list1/list1.wxml-->
+<view class="container">
+  <view class="bg">
+    <image src="/images/bg.png">
+    </image>
+  </view>
+<view class="content">
+  <view>
+    <rich-text nodes="<h3 class='subtitle'>智能健康分析</h3>">
+    </rich-text>
+  </view>
+
+<view class="txt">
+  <text>请上传您的膝关节照片</text>
+</view>
+
+  <picker mode="date" header-text="选择时间"  value="{{date1}}" bindchange="bindDateChange1">
+    <view class="font30">
+      <text class="color3">手术时间：</text>
+      <text class="color6">{{date1}}</text>
+      <image class="calendar-icon" src="/images/calendar.png"></image>
+    </view>
+  </picker>
+
+<picker mode="date" header-text="选择时间"  value="{{date2}}" bindchange="bindDateChange2">
+  <view class="font30">
+    <text class="color3">问诊时间：</text>
+    <text class="color6">{{date2}}</text>
+    <image class="calendar-icon" src="/images/calendar.png"></image>
+  </view>
+</picker>
+
+<view class="panel-title">{{title}}</view>
+  <view class="{{uploaderList.length === 0 ? 'ui-uploader-cell':'ui-uploader-cell-other'}}">
+    <!-- 根据已选择的图片临时路径数组展示图片-->
+    <view class='ui-uploader-item' wx:for="{{uploaderList}}" wx:key="{{index}}">
+      <!-- 删除-->
+      <icon class='ui-uploader-item-icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="20" color="#666666" />
+      <!-- 图片-->
+      <image bindtap='showImg' data-index="{{index}}" src='{{item}}' class="ui-uploader-item-image"></image>
+    </view>
+    <!-- 上传按钮+框 -->
+    <view class='ui-uploader' bindtap='upload' wx:if="{{showUpload}}">
+      <image src="/images/update_img.png" mode="aspectFit" class="f1"></image>
+    </view>
+    <view wx:if="{{uploaderList.length === 0}}" class="title2">{{desc}}</view>
+  </view>
+
+  <view class="f1">
+    <text>
+      上传要求：
+      第一张为膝关节正面照片
+      第二张为膝关节健康一侧最大弯曲照片
+      第三张为膝关节术后一侧最大弯曲照片
+      第四张为术后一侧膝关节术后一侧主动伸直照片
+      第五张为术后一侧膝关节术后一侧被动伸直照片
+    </text>
+  </view>
+</view>
+
+<!-- 在上传要求的view下面添加示例图片 -->
+<!-- <view class="example-section">
+  <view class="example-title">示例图片：</view>
+  <scroll-view class="example-scroll" scroll-x>
+    <view class="example-item" wx:for="{{5}}" wx:key="index">
+      <image src="/images/examples/{{index + 1}}.jpg" mode="aspectFill" class="example-image"></image>
+      <text class="example-text">示例{{index + 1}}</text>
+    </view>
+  </scroll-view>
+</view> -->
+
+
+
+<view class="button-container">
+  <button class="custom-button start-button" bindtap="uploadAndAnalyze">开始分析</button>
+  <button class="custom-button home-button" bindtap="gotopage1">返回首页</button>
+</view>
+
+</view>

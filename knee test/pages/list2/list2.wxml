@@ -1,0 +1,23 @@
+<!--pages/list2/list2.wxml-->
+
+<view class="container">
+  <view class="bg">
+    <image src="/images/bg.png">
+    </image>
+  </view>
+
+  <view class="content">
+    <view>
+      <rich-text nodes="<h3 class='subtitle'>智能健康分析结果</h3>">
+      </rich-text>
+    </view>
+
+    <view class="analysis-result">
+      <text>{{analysisResult}}</text>
+    </view>
+
+    <view class="button-container">
+      <button class="custom-button home-button" bindtap="gotopage1">返回首页</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+/* pages/list2/list2.wxss */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 0;
+}
+.bg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+.bg image{
+  width: 100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* 内容在背景图之上 */
+  width: 100%;
+  max-width: 690rpx;
+  color: black;
+}
+
+.subtitle {
+  color: black;
+  text-align: center;
+}
+
+
+.btn {
+  position: fixed; /* 固定定位 */
+  bottom: 5px; /* 距离底部 0 */
+  left: 0;
+  right: 0;
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 70rpx; /* 设置按钮容器的高度 */
+  box-sizing: border-box; /* 包括内边距和边框在内的总宽度和高度 */
+}
+
+.custom-button {
+  width: 80%; /* 设置按钮宽度为 80%，留出一些边距 */
+  height: 100%; /* 按钮高度占满容器 */
+  background-color: lightskyblue; /* 设置按钮背景颜色 */
+  color: black; /* 设置按钮文字颜色 */
+  border-radius: 40rpx; /* 设置按钮圆角 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

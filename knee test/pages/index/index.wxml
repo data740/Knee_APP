@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<swiper class="swiper-container" indicator-dots autoplay>
+  <!--第一张图片-->
+  <swiper-item>
+    <image src="/images/1.jpg" mode="cover"></image>
+  </swiper-item>
+  <!--第二张图片-->
+  <swiper-item>
+    <image src="/images/2.jpg" mode="cover"></image>
+  </swiper-item>
+  <!--第三张图片-->
+  <swiper-item>
+    <image src="/images/3.jpg" mode="cover"></image>
+  </swiper-item>
+</swiper>
+
+<view class="f2">
+  <rich-text nodes="<h3 style='color::black;'>快速入口</h3>">
+  </rich-text>
+</view>
+
+<view class="container2">
+    <button class="btn" bindtap="gotoPage2">
+      <image class="btnImg" src='/images/AI.png'></image>
+      <text>AI智能分析</text>
+    </button>
+</view>
+<view class="container2">
+    <button class="btn" bindtap="gotoPage2">
+      <image class="btnImg" src='/images/康复建议.png'></image>
+      <text>康复建议</text>
+    </button>
+</view>
+<view class="container2">
+    <button class="btn" bindtap="gotoPage2">
+      <image class="btnImg" src='/images/康复视频.png'></image>
+      <text>康复视频</text>
+    </button>
+</view>
+
+
